@@ -39,7 +39,7 @@ df.head(2)
 
 
 #connect sql alchemy engine
-my_conn = create_engine('mysql+pymysql://root:Priya%4053519@localhost/sales')
+my_conn = create_engine('mysql+pymysql://root:password@localhost/sales')
 print(df.shape)
 
 #load to database EMPDOC is table
