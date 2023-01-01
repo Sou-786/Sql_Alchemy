@@ -48,6 +48,9 @@ print(df.shape)
     
 df.to_sql(name='days', con=my_conn, if_exists='append', index=False, dtype=sqlalchemy.types.String(length=255))
 
+#Disable safe object mode for erroe code 1175,  
+#Query = SET SQL_SAFE_UPDATES=0;
+
 sql = """
  delete  from days where id not in( select * from(
 select max(id) as id from days 
